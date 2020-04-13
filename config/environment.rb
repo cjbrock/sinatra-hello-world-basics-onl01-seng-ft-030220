@@ -4,4 +4,5 @@ ENV['RACK_ENV'] ||= "development"
 require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
-require_relative '../app'
+require './app/controllers/application_controller'
+require_all 'app'

@@ -1,26 +1,16 @@
-# Sinatra Hello World Basics
+# Sinatra Basics
 
-## Objectives
+## Configuration Notes
 
-1. Create a basic Sinatra application.
-2. Write a `get` method.
-3. Render a string from that `get` method.
+### To set your application to require_all using the gem:
 
-## Instructions
+- in your config/environment file
+- require './app/controllers/application_controller'
+require_all 'app'
 
-Fork and clone this repository and run `bundle install` to get started!
+### To use the App/MVC Structure
 
-On your local environment (not in the IDE), run `shotgun` to start a local server so that you
-can test your app in your browser. Shotgun default is using port 9393, you
-should be able to visit the following url `http://localhost:9393`.
-
-1. Write a `get` method in the `app.rb` file to respond to the root URL '/'.
-2. The `get` route should respond with the string `"Hello, World!"`.
-
-You can run `learn` to see error messages.
-
-## Resources
-
-[Sinatra Basics](https://github.com/learn-co-curriculum/sinatra-basics)
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-hello-world-basics' title='Sinatra Hello World Basics'>Sinatra Hello World Basics</a> on Learn.co and start learning to code for free.</p>
+- Set the following configuration block in your application controller (before the routes):
+  configure do
+    set :views, 'app/views'
+  end

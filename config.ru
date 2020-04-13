@@ -1,3 +1,6 @@
 require './config/environment'
 
-run App
+
+use StudentsController
+use TeachersController
+run ApplicationController

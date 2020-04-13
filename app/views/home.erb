@@ -1,0 +1,9 @@
+<h1>Hello World!</h1>
+
+<h2><%= @name%> is attending study group today</h2>
+
+<ul>
+<% @names.each do |name| %>
+  <li><%=name%> is also at study group</li>
+<% end %>
+</ul>
